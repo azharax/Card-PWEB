@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Layout CSS | Tugas Pertemuan 7</title>
+        <style>
+            :root{
+                --primary-color: #ff5858;
+                --text-color: #333;
+                --sub-text-color: #555;
+            }
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #f4f4f4;
+                padding: 20px;
+            }
+
+            .wrapper {
+                max-width: 1200px;
+                margin: 56px auto;
+            }
+
+            header {
+                text-align: start;
+                margin-bottom: 20px;
+            }
+
+            header h1 {
+                color: var(--primary-color);
+                font-size: 2.5rem;
+            }
+
+            header p {
+                color:  var(--text-color);
+                font-size: 1.2rem;
+            }
+
+            .portfolio {
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+            }
+
+            .card {
+                background-color: white;
+                border: 1px solid #ddd;
+                border-radius: 5px;
+                width: 22%;
+                margin-bottom: 20px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                transition: transform 0.3s ease;
+            }
+
+            .card:hover {
+                transform: scale(1.05);
+                cursor: pointer;
+            }
+
+            .card-header {
+                background-color: var(--primary-color);
+                color: white;
+                padding: 10px;
+                font-size: 1.2rem;
+                text-align: center;
+            }
+
+            .card-body {
+                padding: 20px;
+            }
+
+            .card-body h2 {
+                color: var(--text-color);
+                font-size: 1.5rem;
+                margin-bottom: 10px;
+            }
+
+            .card-body p {
+                color: var(--sub-text-color);
+                font-size: 1rem;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="wrapper">
+            <header>
+                <h1>Bismillah Tutor</h1>
+                <p>Website Seperti Ruangguru, Insyaallah Dapat Nilai A</p>
+            </header>
+
+            <section class="portfolio">
+                <div class="card">
+                    <div class="card-header">Aqidah</div>
+                    <div class="card-body">
+                        <h2>Materi Aqidah</h2>
+                        <p>
+                            Membahas tentang tauhid dan kaidah agama Islam
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">Akhlak</div>
+                    <div class="card-body">
+                        <h2>Materi Akhlak</h2>
+                        <p>
+                            Membahas tentang perilaku dan karakter terpuji 
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">Fikih</div>
+                    <div class="card-body">
+                        <h2>Materi Fikih</h2>
+                        <p>
+                            Membahas tentang hukum dalam agama Islam
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">Tarikh</div>
+                    <div class="card-body">
+                        <h2>Materi Tarikh</h2>
+                        <p>
+                            Membahas tentang sejarah Islam, dari Nabi hingga ke sahabat-sahabatnya
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </body>
+</html>
